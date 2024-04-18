@@ -15,3 +15,6 @@ Double click the title (KPI Sales) and add a sheet title and insert the two deta
 Play with the Format - Pane (use ▲ 0.00%; ▼ -0.00%; as a custom format)
 
 --Present the data for each KPI on a monthly basis for both the current year and the previous year. (SparkLine)
+Add Order Date to the Columns and switch from YEARS to Months with drop down menu (Change Discrete to continuous)
+Add SUM(CY Sales) to the Row
+Add SUM(PY Sales) to the Y axis of the chart
