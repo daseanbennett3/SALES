@@ -12,4 +12,6 @@ Remove the Year (Order Date) and add % Diff Sales to the Measure Values
 
 In a new worksheet, add SUM(CY Sales) & % Diff Sales to the details
 Double click the title (KPI Sales) and add a sheet title and insert the two details above
-Play with the Format - Pane
+Play with the Format - Pane (use ▲ 0.00%; ▼ -0.00%; as a custom format)
+
+--Present the data for each KPI on a monthly basis for both the current year and the previous year. (SparkLine)
