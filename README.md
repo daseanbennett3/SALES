@@ -18,3 +18,13 @@ Play with the Format - Pane (use ▲ 0.00%; ▼ -0.00%; as a custom format)
 Add Order Date to the Columns and switch from YEARS to Months with drop down menu (Change Discrete to continuous)
 Add SUM(CY Sales) to the Row
 Add SUM(PY Sales) to the Y axis of the chart
+
+--Highlight the HIGHEST AND LOWEST point on the Sparkline Chart
+Create a Calculated Field (IF SUM([CY Sales]) = WINDOW_MAX(SUM([CY Sales])) THEN SUM([CY Sales]) ELSEIF SUM([CY Sales]) = WINDOW_MIN(SUM([CY Sales])) THEN SUM([CY Sales]) END)
+Add the Mix/Max you jst created to the Rows
+Chain the Min/Max to a Circle and change the Measured Values to a Line instead of Automatic for both
+Change Min/Max in the Rows to Dual Axis
+
+--Fix the title so its not a range that reacts to what is below it (another way coould be to do the Sparkline on a different sheet)
+In the Measured Values, add a "}" to the end and a "{" begining of both values (SUM of CY Sales and % DIff Sales)
+Double click the title and re-Insert the two tabs that were just adjusted
