@@ -32,6 +32,11 @@ Double click the title and re-Insert the two tabs that were just adjusted
 --To change the dot colors
 Control and drag the min/max sales to the Colors tab on the left side. Chnage Automatic drop down to Diverging Colors and change the Stepped Colors to 2 Steps
 
---Create a parameter for the current year and the previous year in order to use it in the Tool Tip
-Calculated Field (SELECT (YEAR)) and (SELECT YEAR -1), then cConvert them to Dimensions rather than 
-Add the previous year, current year, and 
+--Create a parameter for the current year and the previous year in order to use it in the Tool Tip (The Tool Tip is the dots on the grap you can hover over to see more information)
+Calculated Field (SELECT (YEAR)) and (SELECT YEAR -1), then Convert them to Dimensions
+Add the previous year, current year, current sales, previous sales, and the % Diff Sales to the Tool Tip
+Double click Tool Tip and inseret which parameters you would like to display
+Tool Tip should look like this {--Sales of<MONTH(Order Date)>, <ATTR(Current Year)>:<SUM(CY Sales)>
+                                  Sales of<MONTH(Order Date)>,<ATTR(Previous Year)>:<SUM(PY Sales)>
+                                  Sales DIfferences:<AGG(% Diff Sales)>
+                                  Highest/Lowest Sales:<AGG(MIN/MAX Sales)>--}
