@@ -30,4 +30,8 @@ In the Measured Values, add a "}" to the end and a "{" begining of both values (
 Double click the title and re-Insert the two tabs that were just adjusted
 
 --To change the dot colors
-Control and drag the min/max sales to the Colors tab on the left side. Chnage Automatic drop down to Diviring Colors and change the Stepped Colors to 2 Steps
+Control and drag the min/max sales to the Colors tab on the left side. Chnage Automatic drop down to Diverging Colors and change the Stepped Colors to 2 Steps
+
+--Create a parameter for the current year and the previous year in order to use it in the Tool Tip
+Calculated Field (SELECT (YEAR)) and (SELECT YEAR -1), then cConvert them to Dimensions rather than 
+Add the previous year, current year, and 
