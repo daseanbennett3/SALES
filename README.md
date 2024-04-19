@@ -28,3 +28,6 @@ Change Min/Max in the Rows to Dual Axis
 --Fix the title so its not a range that reacts to what is below it (another way coould be to do the Sparkline on a different sheet)
 In the Measured Values, add a "}" to the end and a "{" begining of both values (SUM of CY Sales and % DIff Sales)
 Double click the title and re-Insert the two tabs that were just adjusted
+
+--To change the dot colors
+Control and drag the min/max sales to the Colors tab on the left side. Chnage Automatic drop down to Diviring Colors and change the Stepped Colors to 2 Steps
