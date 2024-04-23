@@ -6,15 +6,17 @@ Calculated Field[YEAR(Order Date)]
 Create Parameter named Select Year with Data Type(Integer) - Allowable Values - Add Values From - Display Format - Okay - select the parameter - Show Parameter
 Change Calulated Parameter to [IF YEAR(Order Date) = Select Year THEN Sales END] for the current year and [IF YEAR(Order Date) = Select Year - 1 THEN Sales END] to get the previous year
 
-Create a parameter that shows the percentage difference of sales ((SUM([CY Sales]) - SUM([PY Sales])) / SUM([PY Sales]))
+--Build The KPI Sales Worksheet
+Create a parameter called "% Diff Sales" that shows the percentage difference of sales ((SUM([CY Sales]) - SUM([PY Sales])) / SUM([PY Sales]))
 Change the Default Properties - Number Format to Percentage
 Remove the Year (Order Date) and add % Diff Sales to the Measure Values
 
-In a new worksheet, add SUM(CY Sales) & % Diff Sales to the details
-Double click the title (KPI Sales) and add a sheet title and insert the two details above
-Play with the Format - Pane (use ▲ 0.00%; ▼ -0.00%; as a custom format)
+In a new worksheet, add SUM(CY Sales) & % Diff Sales to the Detail
+Double click the title (KPI Sales) and add a sheet title and insert the two details above (% Diff Sales & SUM(CY Sales))
+Double-click on "AGG(% Diff Sales)" with the Format - Pane (use ▲ 0.00%; ▼ -0.00%; as a custom format)
 
 --Present the data for each KPI on a monthly basis for both the current year and the previous year. (SparkLine)
+Add the Select Year parameter to the page if necessary
 Add Order Date to the Columns and switch from YEARS to Months with drop down menu (Change Discrete to continuous)
 Add SUM(CY Sales) to the Row
 Add SUM(PY Sales) to the Y axis of the chart
@@ -40,3 +42,9 @@ Tool Tip should look like this {--Sales of<MONTH(Order Date)>, <ATTR(Current Yea
                                   Sales of<MONTH(Order Date)>,<ATTR(Previous Year)>:<SUM(PY Sales)>
                                   Sales DIfferences:<AGG(% Diff Sales)>
                                   Highest/Lowest Sales:<AGG(MIN/MAX Sales)>--}
+
+Adjust the ToolTip to make it more reable with different coloring and BOLDing
+
+--THE BAN/TITLE (Have the Parameters from line 7 already made)
+
+
