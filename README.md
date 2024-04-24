@@ -10,7 +10,7 @@ Create Parameter named Select Year with Data Type(Integer) - Allowable Values - 
 Change Calulated Parameter to [IF YEAR(Order Date) = Select Year THEN Sales END] for the current year and [IF YEAR(Order Date) = Select Year - 1 THEN Sales END] to get the previous year
 
 --Build The KPI Sales Worksheet
-Create a parameter called "% Diff Sales" that shows the percentage difference of sales ((SUM([CY Sales]) - SUM([PY Sales])) / SUM([PY Sales]))
+Create a Calculated Field called "% Diff Sales" that shows the percentage difference of sales ((SUM([CY Sales]) - SUM([PY Sales])) / SUM([PY Sales]))
 Change the Default Properties - Number Format to Percentage
 Remove the Year (Order Date) and add % Diff Sales to the Measure Values
 
@@ -28,7 +28,7 @@ Add SUM(PY Sales) to the Y axis of the chart
 Create a Calculated Field called "MIN/MAX Sales"(IF SUM([CY Sales]) = WINDOW_MAX(SUM([CY Sales])) THEN SUM([CY Sales]) ELSEIF SUM([CY Sales]) = WINDOW_MIN(SUM([CY Sales])) THEN SUM([CY Sales]) END)
 Add the Mix/Max you just created to the Rows
 Change the Min/Max to a Circle and change the Measured Values to a Line instead of Automatic for both
-Change Min/Max in the Rows to Dual Axis
+Change Min/Max in the Rows to Dual Axis AND Synchronize Axis if necessary
 
 --Fix the title so it's not a range that reacts to what is below it (another way coould be to do the Sparkline on a different sheet)
 In the All tab (Same place where you find Measured Values), add a "}" to the end and a "{" begining of both values (SUM of CY Sales and % Diff Sales)
@@ -39,7 +39,7 @@ Control and drag the "Min/Max Sales" from the Rows to the Colors tab on the left
 Change Automatic drop down to "Diverging Colors" and change the "Stepped Colors" to "2 Steps"
 
 --Create a parameter for the current year and the previous year in order to use it in the Tool Tip (The Tool Tip is the dots on the grap you can hover over to see more information)
-Calculated Field (SELECT (YEAR)) and (SELECT YEAR -1), then Convert them to Dimensions
+Create a Calculated Field called "Current Year" (SELECT (YEAR)) and another one called "Previous Year" (SELECT YEAR -1), then Convert them to Dimensions
 Add the previous year, current year, current sales, previous sales, and the % Diff Sales to the Tool Tip
 Double click Tool Tip and inseret which parameters you would like to display
 Tool Tip should look like this {--Sales of<MONTH(Order Date)>, <ATTR(Current Year)>:<SUM(CY Sales)>
