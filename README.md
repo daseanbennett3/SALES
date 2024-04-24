@@ -49,6 +49,13 @@ Tool Tip should look like this {--Sales of<MONTH(Order Date)>, <ATTR(Current Yea
 
 Adjust the ToolTip to make it more reable with different coloring and BOLDing
 
---THE BAN/TITLE (Have the Parameters from line 7 already made)
-
-
+--Subcategory Comparison Graph
+Drag & drop the Sub-Category to the Rows
+Drag & drop CY Sales and PY Sales to the Colummns
+In the Marks card (Previously known as measured values) change the drop down menu from Automatic to Bar for both graphs
+Right-click CY Sales in the Column and change to Dual Axis
+Syncronize Axis on the CY Sales
+Add CY Profit to the Columns
+Hide CY Sales Header and Show Parameter Select Year
+Adjust Grid Lines, Font of the axis' and Bar sizes
+Control and Drag CY Profits to the Colors in the Marks card and do the 2 Step Color Divirging
