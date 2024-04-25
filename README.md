@@ -75,4 +75,26 @@ Format the numbers in the Tool Tip by Right-clicking on the thing you wanna chan
 
 --Weekly Trends (New Worksheet)
 Add Order Date to the Columns, change from YEAR to More -- Week Number and then make it continuous
+Add CY Sales and CY Profit to the Rows 
+Right-click on the top header and Add Reference Line -- Change Label: to Custom rather than Computation and name it "Avg." and Add "<Value>"
+Do the same for the other graph
+Edit the lines font, boldness, ect...
+
+--Highlight the Above and Below averages
+click on the SUM(CY Sales) in the Marks card and Control + Drag the CY Sales from Rows to the Colors
+create a Calculated Field called "KPI Sales Average" that looks like this >>> IF SUM([CY Sales]) > WINDOW_AVG(SUM([CY Sales]))
+                                                                              THEN 'above'
+                                                                              ELSE 'below'
+                                                                              END
+
+Add KPI Sales Average to the Color under the CY Sales in the Marks card
+Do The same thing from line 85 except with Profits
+
+Go to the Tool Tip in the All section of the Marks card
+Add Current Year to the Tool Tip and make it look like this >>  <WEEK(Order Date)>
+                                                                Sales of <ATTR(Current Year)>: <SUM(CY Sales)>
+                                                                <AGG(KPI Sales Average)> the average
+                                                                Profit of <ATTR(Current Year)>: <SUM(CY Profit)>
+                                                                <AGG(KPI Profit Average)> the average
+
 
