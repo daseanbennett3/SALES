@@ -49,7 +49,7 @@ Tool Tip should look like this {--Sales of<MONTH(Order Date)>, <ATTR(Current Yea
 
 Adjust the ToolTip to make it more reable with different coloring and BOLDing
 
---Subcategory Comparison Graph
+--Subcategory Comparison Graph (New Worksheet)
 Drag & drop the Sub-Category to the Rows
 Drag & drop CY Sales and PY Sales to the Colummns
 In the Marks card (Previously known as measured values) change the drop down menu from Automatic to Bar for both graphs
@@ -59,3 +59,20 @@ Add CY Profit to the Columns
 Hide CY Sales Header and Show Parameter Select Year
 Adjust Grid Lines, Font of the axis' and Bar sizes
 Control and Drag CY Profits to the Colors in the Marks card and do the 2 Step Color Divirging
+
+Create a Calculated Field called KPI CY less than PY (IF SUM([CY Sales]) < SUM([PY Sales]) THEN '*' ELSE '$' END)
+Drag the Calculated Field to the Rows
+Right-click Sub-Category in the Columns, Sort By: Field - Descending - Field Name: CY Sales
+
+In the Marks card, under All, add CY Profit, CY Sales, Current Year, PY Sales, Previous Year, % Diff Sales to the Tool Tip
+ToolTip should look like this >>> Sub-Category:	<Sub-Category>
+                                  Sales of <ATTR(Current Year)>: <SUM(CY Sales)>
+                                  Sales of <ATTR(Previous Year)>: <SUM(PY Sales)>
+                                  Sales Difference: <AGG(% Diff Sales)>
+                                  Profit of <ATTR(Current Year)>: <SUM(CY Profit)>
+                                  
+Format the numbers in the Tool Tip by Right-clicking on the thing you wanna change in the Marks card under Numbers in the Default Pane
+
+--Weekly Trends (New Worksheet)
+Add Order Date to the Columns, change from YEAR to More -- Week Number and then make it continuous
+
