@@ -100,16 +100,31 @@ Add Current Year to the Tool Tip and make it look like this >>  <WEEK(Order Date
 --BUILDING DASHBOARDS
 Create a Dashboard called "Sales Dashboard"
 Adjust the size (from Ranged to Fixed: 1200 x 800) under the Dashboard tab on the left
+
 --Create a Vertical/Hidden/Floatiing Filter Container
 Drag and drop the KPI Sales worksheet to the middle on the dashboard
 Hold shift and click and drag the filter anywhere
 Remove the line graph
-Play the color of the floating container
+Play with the color of the floating container
 Rename the container "Filter" in the Item Hierarchy -- Vertical Container
+
+--Main Container
 In the Dashboard tab, under Objects click and drag the Vertical Container in the middle of the dashboard
 Adjust the line color and background color in the Layout tab
 Rename the container in the Item Hierarchy (Main)
 Add a Blank (under Objects)to the dashboard as a placeholder
-Add a Horizontal Container (under Objects)to the dashboard and adjust the line border and the background color
+Add (To the bottom of the container) a Horizontal Container (under Objects)to the dashboard and adjust the line border and the background color
 Rename the Horizaontal Container in the Item Hierarchy (Title)
-Add a Text to the dashbaord
+
+Add a Text to the Horizontal Container and type "Sales Dashboard"
+
+Add two Navigations (under Objects) to the Horizontal Container (Must show a shadow on the far right side of the container to signify its the horizonal Sales Dashboard container)
+
+--Horizontal Container for the KPIs
+Add a Horizontal Container to the botton Horizontal Container (Edit the border and background color then name it KPIs)
+Add a Blank to the container you just edited
+Add 2 more Blanks to the other one (There should be 3 in the 1 container) ) (Look for the horizontal shadow on the far right)
+
+--Horizontal Container for the Charts
+Add a Horizontal Container under the other two to the dashboard (Name it Charts)
+Add two blanks to the new container
