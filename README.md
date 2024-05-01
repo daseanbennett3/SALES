@@ -1,5 +1,5 @@
---Create CY Sales IF YEAR([Order Date]) = [Select Year] THEN [Sales] END
---Create PY Sales IF YEAR([Order Date]) = [Select Year] - 1 THEN [Sales] END 
+--Create CY Sales >>> IF YEAR([Order Date]) = [Select Year] THEN [Sales] END
+--Create PY Sales >>> IF YEAR([Order Date]) = [Select Year] - 1 THEN [Sales] END 
 
 --Display a summary of total number of customers , total sales per customer and total number of orders for the current year and the previous year:
 YEAR(Order Date) as the Row
@@ -97,4 +97,19 @@ Add Current Year to the Tool Tip and make it look like this >>  <WEEK(Order Date
                                                                 Profit of <ATTR(Current Year)>: <SUM(CY Profit)>
                                                                 <AGG(KPI Profit Average)> the average
 
-
+--BUILDING DASHBOARDS
+Create a Dashboard called "Sales Dashboard"
+Adjust the size (from Ranged to Fixed: 1200 x 800) under the Dashboard tab on the left
+--Create a Vertical/Hidden/Floatiing Filter Container
+Drag and drop the KPI Sales worksheet to the middle on the dashboard
+Hold shift and click and drag the filter anywhere
+Remove the line graph
+Play the color of the floating container
+Rename the container "Filter" in the Item Hierarchy -- Vertical Container
+In the Dashboard tab, under Objects click and drag the Vertical Container in the middle of the dashboard
+Adjust the line color and background color in the Layout tab
+Rename the container in the Item Hierarchy (Main)
+Add a Blank (under Objects)to the dashboard as a placeholder
+Add a Horizontal Container (under Objects)to the dashboard and adjust the line border and the background color
+Rename the Horizaontal Container in the Item Hierarchy (Title)
+Add a Text to the dashbaord
