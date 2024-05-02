@@ -147,3 +147,17 @@ Click on the Vertical Container (Filter) -- Drop down menu -- Add Show/Hide Butt
 
 Click on each chart and make sure it says Entire View and not Standard at the very top
 
+--ADD A LEGEND TO THE CHARTS (Create a Chart for the Legend)
+Create a new sheet named Subcategory Legend
+Add Current Year and Previous Year to the Text
+The Text should be >> <Current Year> Sales VS. <Previous Year> Sales
+Go from Standard to Entire View at the top
+
+Add a Vertical Container next to the Horizontal Container that has the Subcategory Comparison
+Add the Subctegory Comparison in the Horizontal Container and add it to the Vertical Container
+Rename it Chart 1
+Add a Text to the top of the Vertical Container and name it Sales & Profit by Subcategory
+Hide the Subcategory Comparison title
+Add a Horizontal Container under the Title in the Vertical Container
+Add Subcategory Legend to the new Horizontal Container
+
