@@ -129,3 +129,21 @@ Add 2 more Blanks to the other one (There should be 3 in the 1 container) ) (Loo
 Add a Horizontal Container under the other two to the dashboard (Name it Charts)
 Add two blanks to the new container
 
+--BUILDING DASHBOARD (Put all Charts together)
+From Sheets, Add KPI Sales to the far left, KPI Profit to the middle, and KPI Quantity to the right (Make sure it shows up correctly in the Item Hierarchy)
+From Sheets, Add Subcategory Comparison to the far left and Weekly Trends to the middle in the botton Horizontal Container
+
+--BUILDING DASHBOARD (Format)
+Click the chosen horizontal container from the Item Hierarchy, click the drop-down arrow and hit "Distribute Contents Evenly"
+Edit the title by adding the Select Year Parameter
+
+--Edit the two navigations at the top so the Contents can be Evenly Distributed
+Add a Horizontal Container to the far right
+Drag both Navigation buttons to the new Horizontal Container 
+Check the Item Hierarchy to make sure the two Navigation buttons are in the correct space (Rename it Buttons)
+Click the button -- drop down menu -- Edit Button -- Navigate To: Sales Dashboard -- Title: Sales Dashboard -- Tooltip: Go To Sales Dashboard
+
+Click on the Vertical Container (Filter) -- Drop down menu -- Add Show/Hide Button -- Drow down menu -- Hide Button
+
+Click on each chart and make sure it says Entire View and not Standard at the very top
+
