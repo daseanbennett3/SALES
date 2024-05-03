@@ -159,5 +159,14 @@ Rename it Chart 1
 Add a Text to the top of the Vertical Container and name it Sales & Profit by Subcategory
 Hide the Subcategory Comparison title
 Add a Horizontal Container under the Title in the Vertical Container
-Add Subcategory Legend to the new Horizontal Container
+Add Subcategory Legend from Sheets to the new Horizontal Container (Then Hide Title)
+Add Text to the right side of the "2023 Sales vs 2022 Sales" Horizontal Container
+The Text should be >> <Parameters.Select Year> ⬤Profit ⬤Loss
+
+Add a Vertical Container to the middle of the bottom container
+Drag the Weekly Trends container to the newly created Vertical Container (Name it Chart 2 in Item Hierarchy)
+Add a Text to the top of the newly created Vertical Container (It should read >> Sales & Profits Over Time)
+Hide the "Weekly Trends" title
+Add a Text between the graphs and the title (It should read >> )
+
 
