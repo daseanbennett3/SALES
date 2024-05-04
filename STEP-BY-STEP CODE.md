@@ -176,3 +176,7 @@ Go back to the Sales Dashboard and add the newly created KPI Legend (in the Shee
 Hide the title of the KPI Legend to show the Text
 Adjust the border colors and padding (8 everywhere except for the top)
 
+--DYNAMIC FILTERS
+Go to KPI Sales sheet, select Category, right-click and select "Show Filter" (Do the same for Subcategory, Region, State, and City)
+Click each filter in the Filters tab -- right click -- Apply to Worksheets -- All Using This Datasource
+Go back to Sales Dashboard
