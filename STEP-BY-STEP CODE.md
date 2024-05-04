@@ -169,4 +169,10 @@ Add a Text to the top of the newly created Vertical Container (It should read >>
 Hide the "Weekly Trends" title
 Add a Text between the graphs and the title (It should read >> )
 
+--CREATE A LEGEND FOR THE 3 CHARTS
+Duplicate the Subcategory Legend and renane the duplicate KPI Legend
+The Text should be >> <Current Year>  VS. <Previous Year>  ⬤ Highest Month ⬤ Lowest Month
+Go back to the Sales Dashboard and add the newly created KPI Legend (in the Sheets area) right below the title and above the 3 horizontal containers
+Hide the title of the KPI Legend to show the Text
+Adjust the border colors and padding (8 everywhere except for the top)
 
