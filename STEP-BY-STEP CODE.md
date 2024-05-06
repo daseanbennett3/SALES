@@ -180,3 +180,11 @@ Adjust the border colors and padding (8 everywhere except for the top)
 Go to KPI Sales sheet, select Category, right-click and select "Show Filter" (Do the same for Subcategory, Region, State, and City)
 Click each filter in the Filters tab -- right click -- Apply to Worksheets -- All Using This Datasource
 Go back to Sales Dashboard
+Show the filter and make it bigger
+Delete everything in the filter except the Select Year Parameter
+Click on the Total Sales -- Drop down arrow -- Filters -- click on Category, Sub-Category, Region, State, and City
+For each filter in the Filters tab -- Drop down menu -- Multiple Values (dropdown)
+Add a Text right under Select Year Parameter and below Sub-Category that say "Products" and "Location" respectively
+Add a Blank to make more room
+Add another text at the top as a title named "Filters"
+Adjust the inner padding if desired
