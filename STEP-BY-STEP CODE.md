@@ -9,6 +9,7 @@ Calculated Field[YEAR(Order Date)]
 Create Parameter named Select Year with Data Type(Integer) - Allowable Values - Add Values From - Display Format - Okay - select the parameter - Show Parameter
 Change Calulated Parameter to [IF YEAR(Order Date) = Select Year THEN Sales END] for the current year and [IF YEAR(Order Date) = Select Year - 1 THEN Sales END] to get the previous year
 
+
 --Build The KPI Sales Worksheet
 Create a Calculated Field called "% Diff Sales" that shows the percentage difference of sales ((SUM([CY Sales]) - SUM([PY Sales])) / SUM([PY Sales]))
 Change the Default Properties - Number Format to Percentage
@@ -188,3 +189,9 @@ Add a Text right under Select Year Parameter and below Sub-Category that say "Pr
 Add a Blank to make more room
 Add another text at the top as a title named "Filters"
 Adjust the inner padding if desired
+Select the Use as Filter button on the two graphs in the bottom container
+
+--ADD IMAGES AS ICON
+Click the drop-down menu on the filter -- Edit Button... -- Item Hidden -- Choose -- Pick any image
+Do the same for the Item Shown (Add a tooltip that says what the filter does)
+Drag and drop an Image to the far left of the title -- Choose -- Pick the Icon of the project -- Options: check both Fit Image and Center Image
