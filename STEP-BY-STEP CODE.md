@@ -73,7 +73,7 @@ Syncronize Axis on the CY Sales
 Add CY Profit to the Columns
 Hide CY Sales Header and show the Select Year parameter
 Adjust Grid Lines, Font of the axis' and Bar sizes
-Control and drag CY Profits to the Colors in the Marks card and then change the Automatic drop down to "Diverging Colors" and change the "Stepped Colors" to "2 Steps"
+Control + Drag CY Profits to the Colors in the Marks card and then change the Automatic drop down to "Diverging Colors" and change the "Stepped Colors" to "2 Steps"
 
 Create a Calculated Field called "KPI CY Less Than PY":
 IF SUM([CY Sales]) < SUM([PY Sales]) THEN '*' ELSE '$' END
@@ -89,84 +89,83 @@ Profit of <ATTR(Current Year)>:  <SUM(CY Profit)>
                                   
 Format the numbers in the Tooltip by Right-clicking on the thing you wanna change in the Marks card under Numbers in the Default Pane
 
---Weekly Trends (New Worksheet)
-Add Order Date to the Columns, change from YEAR to More -- Week Number and then make it continuous
+--CREATE A NEW WORKSHEET NAMED "Weekly Trends"
+Add Order Date to the Columns, change from YEAR to More -- Week Number and then make it Continuous
 Add CY Sales and CY Profit to the Rows 
-Right-click on the top header and Add Reference Line -- Change Label: to Custom rather than Computation and name it "Avg." and Add "<Value>"
+Right-click on the top header and Add Reference Line -> Change Label: to Custom rather than Computation and name it "Avg." and Add "<Value>"
 Do the same for the other graph
 Edit the lines font, boldness, ect...
 
---Highlight the Above and Below averages
-click on the SUM(CY Sales) in the Marks card and Control + Drag the CY Sales from Rows to the Colors
-create a Calculated Field called "KPI Sales Average" that looks like this >>> IF SUM([CY Sales]) > WINDOW_AVG(SUM([CY Sales]))
-                                                                              THEN 'above'
-                                                                              ELSE 'below'
-                                                                              END
+--HIGHLIGHT THE ABOVE AND BELOW AVERAGES
+Click on the SUM(CY Sales) in the Marks card and Control + Drag the CY Sales from Rows to the Colors
+Create a Calculated Field called "KPI Sales Average" that looks like this:
+IF SUM([CY Sales]) > WINDOW_AVG(SUM([CY Sales]))
+THEN 'above'
+ELSE 'below'
+END
 
-Add KPI Sales Average to the Color under the CY Sales in the Marks card
+Add "KPI Sales Average" to the Colors under the CY Sales in the Marks card
 Do The same thing from line 85 except with Profits
 
-Go to the Tool Tip in the All section of the Marks card
-Add Current Year to the Tool Tip and make it look like this >>  <WEEK(Order Date)>
-                                                                Sales of <ATTR(Current Year)>: <SUM(CY Sales)>
-                                                                <AGG(KPI Sales Average)> the average
-                                                                Profit of <ATTR(Current Year)>: <SUM(CY Profit)>
-                                                                <AGG(KPI Profit Average)> the average
+Go to the Tooltip in the All section of the Marks card
+Add Current Year to the Tool Tip and make it look like this:
+<WEEK(Order Date)>
+Sales of <ATTR(Current Year)>:  <SUM(CY Sales)>
+<AGG(KPI Sales Average)> the average
+Profit of <ATTR(Current Year)>: <SUM(CY Profit)>
+<AGG(KPI Profit Average)> the average
 
---BUILDING DASHBOARDS
+--BUILDTHE SALES DASHBOARDS
 Create a Dashboard called "Sales Dashboard"
-Adjust the size (from Ranged to Fixed: 1200 x 800) under the Dashboard tab on the left
+Adjust the size (go from Ranged to Fixed: 1200 x 800) under the Dashboard tab on the left
 
---Create a Vertical/Hidden/Floatiing Filter Container
-Drag and drop the KPI Sales worksheet to the middle on the dashboard
-Hold shift and click and drag the filter anywhere
+--CREATE A VERTICAL/HIDDEN/FLOATING Filter Container
+Drag + Drop the KPI Sales worksheet to the middle on the dashboard
+Hold shift and Click + Drag the filter anywhere
 Remove the line graph
 Play with the color of the floating container
-Rename the container "Filter" in the Item Hierarchy -- Vertical Container
+Rename the container "Filter" in the Item Hierarchy -> Vertical Container
 
---Main Container
-In the Dashboard tab, under Objects click and drag the Vertical Container in the middle of the dashboard
+--CREATE THE MAIN CONTAINER
+In the Dashboard tab, under Objects tab, Click + Drag the Vertical Container in the middle of the dashboard
 Adjust the line color and background color in the Layout tab
-Rename the container in the Item Hierarchy (Main)
-Add a Blank (under Objects)to the dashboard as a placeholder
-Add (To the bottom of the container) a Horizontal Container (under Objects)to the dashboard and adjust the line border and the background color
-Rename the Horizaontal Container in the Item Hierarchy (Title)
+Rename the container "Vertical Cont. (Main)" in the Item Hierarchy
+Add a Blank (found under the Objects tab) to the dashboard as a placeholder
+Add (To the bottom of the container) a Horizontal Container (found under the Objects tab) to the dashboard and adjust the line border and the background color
+Rename the container "Horizontal Cont. (Title)" in the Item Hierarchy
 
 Add a Text to the Horizontal Container and type "Sales Dashboard"
 
-Add two Navigations (under Objects) to the Horizontal Container (Must show a shadow on the far right side of the container to signify its the horizonal Sales Dashboard container)
+Add two Navigations (found under the Objects tab) to the Horizontal Container (Must show a shadow on the far right side of the container to signify its the horizonal Sales Dashboard container)
 
---Horizontal Container for the KPIs
-Add a Horizontal Container to the botton Horizontal Container (Edit the border and background color then name it KPIs)
+--HORIZONTAL CONTAINERS FOR THE KPIs
+Add a Horizontal Container to the botton Horizontal Container (Edit the border and background color then name it "Horizontal Cont. (KPIs)")
 Add a Blank to the container you just edited
 Add 2 more Blanks to the other one (There should be 3 in the 1 container) ) (Look for the horizontal shadow on the far right)
 
---Horizontal Container for the Charts
-Add a Horizontal Container under the other two to the dashboard (Name it Charts)
+--HORIZONTAL CONTAINERS FOR THE CHARTs
+Add a Horizontal Container under the other two to the dashboard (Name it "Horizontal Cont. (Charts))
 Add two blanks to the new container
 
---BUILDING DASHBOARD (Put all Charts together)
+--BUILDING THE DASHBOARD (Put all THE Charts together)
 From Sheets, Add KPI Sales to the far left, KPI Profit to the middle, and KPI Quantity to the right (Make sure it shows up correctly in the Item Hierarchy)
-From Sheets, Add Subcategory Comparison to the far left and Weekly Trends to the middle in the botton Horizontal Container
-
---BUILDING DASHBOARD (Format)
+From Sheets, Add Subcategory Comparison to the far left and Weekly Trends to the middle of the botton Horizontal Container
 Click the chosen horizontal container from the Item Hierarchy, click the drop-down arrow and hit "Distribute Contents Evenly"
 Edit the title by adding the Select Year Parameter
 
 --Edit the two navigations at the top so the Contents can be Evenly Distributed
 Add a Horizontal Container to the far right
 Drag both Navigation buttons to the new Horizontal Container 
-Check the Item Hierarchy to make sure the two Navigation buttons are in the correct space (Rename it Buttons)
-Click the button -- drop down menu -- Edit Button -- Navigate To: Sales Dashboard -- Title: Sales Dashboard -- Tooltip: Go To Sales Dashboard
-
-Click on the Vertical Container (Filter) -- Drop down menu -- Add Show/Hide Button -- Drow down menu -- Hide Button
-
+Check the Item Hierarchy to make sure the two Navigation buttons are in the correct space (Rename it "Horizontal Cont. (Buttons)")
+Click the Button -> drop down menu -> Edit Button -> Navigate To: Sales Dashboard -> Title: Sales Dashboard -> Tooltip: Go To Sales Dashboard
+Click on the Vertical Container (Filter) -> Drop down menu -> Add Show/Hide Button -> Drow down menu -> Hide Button
 Click on each chart and make sure it says Entire View and not Standard at the very top
 
 --ADD A LEGEND TO THE CHARTS (Create a Chart for the Legend)
 Create a new sheet named Subcategory Legend
 Add Current Year and Previous Year to the Text
-The Text should be >> <Current Year> Sales VS. <Previous Year> Sales
+The Text should be:
+<Current Year> Sales VS. <Previous Year> Sales
 Go from Standard to Entire View at the top
 
 Add a Vertical Container next to the Horizontal Container that has the Subcategory Comparison
