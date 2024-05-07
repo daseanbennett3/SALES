@@ -43,24 +43,24 @@ Add the "MIN/MAX Sales" you just created to the Rows
 Change the "MIN/MAX Sales" to a Circle and change the Measured Values to a Line instead of Automatic for both
 Change "MIN/MAX Sales" in the Rows to Dual Axis AND Synchronize Axis if necessary
 
---Fix the title so it's not a range that reacts to what is below it (another way coould be to do the Sparkline on a different sheet)
-In the All tab (Same place where you find Measured Values), add a "}" to the end and a "{" begining of both values (SUM of CY Sales and % Diff Sales)
+--FIX THE TITLE SO IT'S NOT A RANGE THAT REACTS TO WHAT IS BELOW (ALTERNATIVELY YOU COULD MAKE A SparkLine Chart ON A DIFFERENT WORKSHEET)
+In the All card (Same place where you find the Measured Values card) add a "}" to the end and a "{" begining of both values (SUM of CY Sales and % Diff Sales):
 Double click the title and re-Insert the two tabs that were just adjusted
 
---To change the dot colors
-Control and drag the "Min/Max Sales" from the Rows to the Colors tab on the left side (Same place where you find Measured Values).
+--CHANGE THE COLORS OF THE DOTS (MIN AND MAX VALUES)
+Control and drag the "MIN/MAX Sales" from the Rows to the Colors box in the All card (Same place where you find Measured Values).
 Change Automatic drop down to "Diverging Colors" and change the "Stepped Colors" to "2 Steps"
 
---Create a parameter for the current year and the previous year in order to use it in the Tool Tip (The Tool Tip is the dots on the grap you can hover over to see more information)
-Create a Calculated Field called "Current Year" (SELECT (YEAR)) and another one called "Previous Year" (SELECT YEAR -1), then Convert them to Dimensions
-Add the previous year, current year, current sales, previous sales, and the % Diff Sales to the Tool Tip
-Double click Tool Tip and inseret which parameters you would like to display
-Tool Tip should look like this {--Sales of<MONTH(Order Date)>, <ATTR(Current Year)>:<SUM(CY Sales)>
-                                  Sales of<MONTH(Order Date)>,<ATTR(Previous Year)>:<SUM(PY Sales)>
-                                  Sales DIfferences:<AGG(% Diff Sales)>
-                                  Highest/Lowest Sales:<AGG(MIN/MAX Sales)>--}
-
-Adjust the ToolTip to make it more reable with different coloring and BOLDing
+--CREATE A PARAMETER FOR THE CURRENT AND PREVIOUS YEAR TO USE IT IN THE Tooltip (THE TOOLTIP IS THE DOTS/MIN AND MAX ON THE GRAPH YOU CAN HOVER OVER FOR MORE INFORMATION)
+Create a Calculated Field called "Current Year" and another one called "Previous Year," then Convert them both to Dimensions
+SELECT YEAR
+SELECT YEAR -1
+Add the Previous Year, Current Year, CY Sales, PY Sales, and % Diff Sales to the Tooltip
+Double click Tool Tip and inseret which parameters you would like to display:
+Sales of <MONTH(Order Date)>, <ATTR(Current Year)>:  <SUM(CY Sales)>
+Sales of <MONTH(Order Date)>, <ATTR(Previous Year)>: <SUM(PY Sales)>
+Sales Differences:    <AGG(% Diff Sales)>
+Highest/Lowest Sales: <AGG(MIN/MAX Sales)>
 
 --Subcategory Comparison Graph (New Worksheet)
 Drag & drop the Sub-Category to the Rows
