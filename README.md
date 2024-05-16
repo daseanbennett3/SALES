@@ -9,4 +9,9 @@ KPI PROFIT: https://public.tableau.com/app/profile/leon.bennett4792/viz/Portfoli
 KPI QUANTITY: https://public.tableau.com/app/profile/leon.bennett4792/viz/PortfolioProject_17134713550010/KPIQuantity?publish=yes
 
 SUBCATEGORY COMPARISON: https://public.tableau.com/app/profile/leon.bennett4792/viz/PortfolioProject_17134713550010/SubcategoryComparison?publish=yes
+
 WEEKLY TRENDS: https://public.tableau.com/app/profile/leon.bennett4792/viz/PortfolioProject_17134713550010/WeeklyTrends?publish=yes
+
+SUBCATEGORY LEGEND: https://public.tableau.com/app/profile/leon.bennett4792/viz/PortfolioProject_17134713550010/SubcategoryLegend?publish=yes
+
+KPI LEGEND: https://public.tableau.com/app/profile/leon.bennett4792/viz/PortfolioProject_17134713550010/KPILegend?publish=yes
