@@ -8,4 +8,10 @@ My sales dashboard displays information for the year 2023 starting with the sale
 
 The first chart at the bottom titled 'Sales & Profit by Subcategory' has two charts within it.
 The first of the two comprares the sales of 2023 to the sales of 2022 based on the sub-categopry.
-The second chart of the two compares the profit to the loss of 2023 by the sub-category.  
+The second chart of the two compares the profits to the losses of 2023 by the sub-category.  
+
+The second graph at the bottom titled 'Sales & Profit Over Time' has two line charts within it. 
+The first of the two line charts displays the current year sales over the year 2023.
+The second of the two line charts displays the current year profits over the year 2023. 
+
+The project is interactive in case a veiwer has a different key point of interest they would like to view. There is also a filter avaivlabe that allows you to pick a key point of interest based on location or the product category. 
