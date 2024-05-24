@@ -16,4 +16,4 @@ The second of the two line charts displays the current year profits over the yea
 
 The project is interactive in case a veiwer has a different key point of interest they would like to view. There is also a filter avaivlabe that allows you to pick a key point of interest based on location or the product category. 
 
-A deeper look into each of the KPI's can be found using the links in my TABLEAU-.md file.
+A deeper look into each of the KPI's can be found using the links in my TABLEAU-FILES.md file.
