@@ -6,4 +6,6 @@ The Customers table gave me the names of the customers. The Location table detai
 
 My sales dashboard displays information for the year 2023 starting with the sales for that year with a percentage change from last year just below it. Besides the sales is the profit in a similar design having the percentage change from last year. Beside the profit in the top, far left is the quantity of products sold with the difference from last year displayed under it. 
 
-The first chart at the bottom titled 'Sales & Profit by Subcategory' has two charts within it. The first of the two comprares the sales of 2023 to the sales of 2022 based on the sub-categopry. The second chart of the two compares the profit to the loss of 2023 by the sub-category.  
+The first chart at the bottom titled 'Sales & Profit by Subcategory' has two charts within it.
+The first of the two comprares the sales of 2023 to the sales of 2022 based on the sub-categopry.
+The second chart of the two compares the profit to the loss of 2023 by the sub-category.  
