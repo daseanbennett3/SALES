@@ -1,6 +1,6 @@
 # TITLE: A Sales Story Using Tableau
 # DESCRIPTION:
-A company was kind enough to allow me access to their Customers, Location, Orders, and Products tables from the years 2020, 2021, 2022, and 2023.
+A company has given information in regards to a Customers, Location, Orders, and Products tables from the years 2020, 2021, 2022, and 2023.
 
 The Customers table gave me the names of the customers.
 The Location table details the location by giving us everything from the Region to the Postal Code.
